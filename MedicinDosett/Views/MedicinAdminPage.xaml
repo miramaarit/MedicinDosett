@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MedicinDosett.Views.MedicinAdminPage"
+             
+             BackgroundColor="Transparent"
+              Padding="10">
+
+    <AbsoluteLayout>
+        <Image Source="sea.jpg"
+      Aspect="AspectFill"
+      AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+      AbsoluteLayout.LayoutFlags="All" />
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout>
+                <Label 
+ Text="Lägg till medicin"
+  FontSize="30"
+     FontAttributes="Bold"
+     Padding="10"
+  VerticalOptions="Center" 
+  HorizontalOptions="Center"
+   TextColor="White"/>
+
+                <Entry
+     x:Name="MedicinNameEntry"
+     Placeholder="Medicinnamn"
+            BackgroundColor="White"
+            PlaceholderColor="Black"
+
+                    Margin="20"
+            ></Entry>
+
+                <Entry
+     x:Name="DoseEntry"
+     Placeholder="Dos"
+            BackgroundColor="White"
+            PlaceholderColor="black"
+            Margin="20"></Entry>
+
+                <Entry
+     x:Name="InfoEntry"
+     Placeholder="Info"
+             BackgroundColor="White"
+             PlaceholderColor="black"
+            Margin="20"></Entry>
+
+                <Entry
+     x:Name="TimeEntry"
+     Placeholder="Tid"
+             BackgroundColor="White"
+  PlaceholderColor="black"
+            Margin="20"></Entry>
+
+                <Button
+     x:Name="SaveButton"
+     Text="Spara produkt"
+            HorizontalOptions="Start"
+     Clicked="OnClickedSaveMedicin"
+            Margin="20"></Button>
+                <Image
+     Source="medicin.jpg"
+     HeightRequest="250"
+                    Margin="10"
+     Aspect="AspectFit"></Image>
+
+            </VerticalStackLayout>
+         
+        </ScrollView >
+    </AbsoluteLayout>
+</ContentPage>

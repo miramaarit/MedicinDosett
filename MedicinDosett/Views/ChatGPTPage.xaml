@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MedicinDosett.Views.ChatGPTPage"
+             Padding="10"
+              BackgroundColor="Transparent">
+    <AbsoluteLayout>
+        <Image Source="sea.jpg"
+Aspect="AspectFill"
+AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+AbsoluteLayout.LayoutFlags="All" />
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+        <VerticalStackLayout>
+                <Label 
+  Text="Dag (kl. 14.00)"
+  FontSize="30"
+     Padding="10"
+      FontAttributes="Bold"
+  VerticalOptions="Center" 
+  HorizontalOptions="Center"
+ TextColor="White"/>
+                <Label x:Name="menu"
+        Text="Höger-klicka för menyval"
+                   TextColor="White"
+                   Margin="10">
+                <FlyoutBase.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Medicinöversikt pappa"
+                          Clicked="OnPappaClicked"/>
+                        <MenuFlyoutItem Text="Medicinöversikt mamma"
+                        Clicked="OnMammaClicked"/>
+
+                        <MenuFlyoutItem Text="Växla person"
+                                    Clicked="OnMainPageClicked"/>
+
+                    </MenuFlyout>
+                </FlyoutBase.ContextFlyout>
+               
+            </Label>
+            <Grid Grid.Column="1"
+                Padding="10"
+                   RowDefinitions="Auto, *, *, *"
+                  ColumnDefinitions="200, *"
+                  ColumnSpacing="20"
+                  Margin="30">
+            </Grid>
+            <Label 
+                
+                   x:Name="MedicinInfo"
+             Text="{Binding TheMedicin}"
+                Padding="10"
+                TextColor="White">
+            </Label>
+           
+        </VerticalStackLayout>
+   </ScrollView>
+        </AbsoluteLayout>
+</ContentPage>

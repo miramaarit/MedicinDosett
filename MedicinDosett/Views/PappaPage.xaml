@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MedicinDosett.Views.PappaPage"
+              BackgroundColor="Transparent"
+             Padding="10"
+            >
+    <AbsoluteLayout>
+        <Image Source="sea.jpg"
+         Aspect="AspectFill"
+         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+         AbsoluteLayout.LayoutFlags="All" />
+
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout>
+            <Label 
+                Padding="10"
+            Text="Medicinöversikt pappa"
+            FontSize="30"
+                 FontAttributes="Bold"
+                 TextColor="White"
+                
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            />
+
+                <Label x:Name="menu"
+            Text="Höger-klicka för menyval"
+            TextColor="White"
+                       Margin="10">
+                    <FlyoutBase.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Morgon (kl. 08.00)"
+                            Clicked="OnMorningClicked"/>
+                        <MenuFlyoutItem Text="Dag (kl. 14.00)"
+                            Clicked="OnDayClicked"/>
+                        <MenuFlyoutItem Text="Kväll (kl. 20.00)"
+                                Clicked="OnEveningclicked"/>
+                        <MenuFlyoutItem Text="Vid behov"
+                                        Clicked="OnIfNecessaryClicked"/>
+                        <MenuFlyoutItem Text="Växla person"
+                                        Clicked="OnMainPageClicked"/>
+                
+                    </MenuFlyout>
+
+                </FlyoutBase.ContextFlyout>
+            </Label>
+
+
+        
+            <ListView ItemsSource="{Binding pappaMedicins}" ItemSelected="OnListViewItemSelect">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <ViewCell>
+                              
+                                <Grid Padding="10"
+                       RowDefinitions="Auto, *, *, *"
+                       ColumnDefinitions="200, *"
+                       ColumnSpacing="20" 
+                           Margin ="30" >
+                                   
+
+                                        <Label 
+                                       
+                                    
+                                    Grid.Column="1"
+                                    
+                            Text="{Binding Name}"
+                                 FontSize="20"
+                                        Padding="10"
+                               BackgroundColor="White"></Label>
+                                <Label Grid.Row="1" Grid.Column="1"
+                                       Text="{Binding Dose}"
+                                       Padding="10"
+                                         FontSize="15"
+                                         BackgroundColor="White"
+                                       ></Label>
+                                       <Label 
+                                          Grid.Row="2" 
+                                            Grid.Column="1"
+                                             Text=  "{Binding Info}"
+                                              Padding="10"
+                                               FontSize="15"
+                                         BackgroundColor="White"></Label>
+                                       <Label 
+                                          Grid.Row="3" 
+                                          Grid.Column="1"
+                                          Text=  "{Binding Time}"
+                                           Padding="10"
+                                          FontSize="15"
+                                          BackgroundColor="White">
+                                  
+                                    </Label>
+                                  
+                                   
+                            
+                            </Grid>
+                               
+                        </ViewCell>
+                           
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+             
+            </VerticalStackLayout>
+    </ScrollView>
+        </AbsoluteLayout>
+</ContentPage>

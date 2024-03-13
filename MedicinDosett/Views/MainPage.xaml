@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MedicinDosett.MainPage"
+             BackgroundColor="Transparent"
+             >
+    <AbsoluteLayout>
+        <Image Source="sea.jpg"
+               Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+               AbsoluteLayout.LayoutFlags="All" />
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+
+
+            <StackLayout Padding="10">
+
+
+                <Image
+                Source="hjartsvikt.jpg"
+                HeightRequest="280"
+                
+                Aspect="AspectFit"
+                SemanticProperties.Description="medicinimage" />
+
+            <Label
+                Text="Läkemedelsdosett"
+                Padding="20"
+                TextColor="White"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Välj person"
+                Padding="10"
+                TextColor="White"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Välj person" />
+
+            <Button
+                Padding="20"
+                x:Name="Pappabtn"
+                Text="Pappa" 
+                Margin="20"
+                
+                SemanticProperties.Hint="Chosen person"
+                Clicked="OnPappaClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Padding="20"
+                 x:Name="Mammabtn"
+                  Text="Mamma" 
+                  
+                  SemanticProperties.Hint="Chosen person"
+                   Clicked="OnMammaClicked"
+                   HorizontalOptions="Center" />
+            </StackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>
