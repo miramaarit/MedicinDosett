@@ -17,7 +17,7 @@
             
             <Label 
                 Padding="10"
-            Text="Medicinöversikt mamma"
+            Text="Läkemedelsöversikt mamma"
             FontSize="30"
                 FontAttributes="Bold"
                 TextColor="White"
