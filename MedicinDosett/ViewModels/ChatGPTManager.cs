@@ -30,8 +30,8 @@ namespace MedicinDosett.ViewModels
             try
             {
 
-               /* string endpoint = "https://api.openai.com/v1/chat/completions";*/ // Måste kommentera bort för att få till github
-                string key ="key"; //Lägg till nyckel
+                string endpoint = "https://api.openai.com/v1/chat/completions";
+                string key = "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"; 
 
                 var data = new
                 {

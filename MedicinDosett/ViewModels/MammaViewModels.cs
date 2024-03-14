@@ -51,7 +51,12 @@ namespace MedicinDosett.ViewModels
             var task = Task.Run(() => GetmammaMedicinsFromDb());
                 task.Wait();
                 MammaMedicins.AddRange(task.Result);
-            
+
+            morningMedicins = MammaMedicins.Where(m => m.Time.ToLower().Contains("morgon")).ToList();
+            dayMedicins = MammaMedicins.Where(m => m.Time.ToLower().Contains("dag")).ToList();
+            eveningMedicins = MammaMedicins.Where(m => m.Time.ToLower().Contains("kväll")).ToList();
+            ifNecessaryMedicins = MammaMedicins.Where(m => m.Time.ToLower().Contains("vid behov")).ToList();
+
         }
     }
 }

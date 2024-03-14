@@ -16,7 +16,7 @@
             <VerticalStackLayout>
             <Label 
                 Padding="10"
-            Text="Medicinöversikt pappa"
+            Text="Läkemedelsöversikt pappa"
             FontSize="30"
                  FontAttributes="Bold"
                  TextColor="White"
