@@ -31,7 +31,7 @@ namespace MedicinDosett.ViewModels
             {
 
                 string endpoint = "https://api.openai.com/v1/chat/completions";
-                //string key = "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";
+                string key = "key";
 
                 var data = new
                 {
