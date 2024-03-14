@@ -19,7 +19,7 @@ namespace MedicinDosett
 
         private async void OnMammaClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.MammaPage("mamma"));
+            await Navigation.PushAsync(new Views.MammaPage("mamma")); // Hej
         }
     }
 
